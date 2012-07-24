@@ -1,0 +1,133 @@
+/* 
+-- Original code from Remi Grumeau
+-- remi.grumeau@gmail.com
+-- Fork on https://github.com/remi-grumeau/Responsive-Design-Tester
+*/
+
+* {
+    box-sizing: 		border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: 	border-box;
+    -o-box-sizing: 		border-box;
+	padding:		0; 
+	margin: 		0; 
+	border: 		0;
+}
+html, 
+body { 
+	margin: 		0; 
+	padding: 		0;
+	font-size: 		10px;
+	font-family: 	Helvetica, Arial, sans-serif;
+	background: 	#eee;
+}
+body > * { 
+	width: 			100%;
+}
+header { 
+	background: 	#444;
+}
+header > form > a.prev,
+header > form > a.next {
+	position:		absolute;
+	top:			.1em;
+	left:			.1em;
+	margin:			0em;
+	padding:		.6em .4em;
+	color:			#000;
+	font-weight:	bold;
+	font-size:		2.0em;
+	line-height:	.1em;
+	background:		#ddd;
+	border-radius:	.15em;
+	-webkit-border-radius:	.15em;
+	-moz-border-radius:		.15em;
+	-o-border-radius:		.15em;
+	cursor:			pointer;
+}
+header > form > a.prev:hover,
+header > form > a.next:hover,
+header > form > select:hover,
+header > form > button[type=submit]:hover {
+	color:			#bc0000;
+	background:		#fff;
+}
+header > form > a.next {
+	left:			1.7em;
+}
+header > form > input {
+	width: 			100%; 
+	padding: 		.5em .5em .5em 4.5em; 
+	font-size: 		1.5em; 
+	color: 			#fff; 
+	background: 	transparent;
+}
+header > form > select { 
+	position: 		absolute; 
+	top: 			.3em;
+	right: 			3.1em;
+	padding: 		.6em .7em;
+	background:		#ddd;
+	cursor:			pointer;
+	-webkit-appearance: 	none; 
+	-moz-appearance: 		none;
+	-o-appearance: 			none;
+	-webkit-border-radius:	.3em;
+	-moz-border-radius:		.3em;
+	-o-border-radius:		.3em;
+}
+header > form > button[type=submit] { 
+	position: 		absolute;
+	top:			.2em;
+	right:			.2em;
+	padding:		.8em .35em .8em .35em;
+	color:			#000;
+	font-weight:	normal;
+	font-size:		1.5em;
+	line-height:	.1em;
+	color: 			#000;
+	background:		#ddd;
+	-webkit-border-radius:	.3em;
+	-moz-border-radius:		.3em;
+	-o-border-radius:		.3em;
+	cursor:			pointer;
+}
+section { 
+	width: 			100%;
+	margin-top:		10px;
+	text-align:		center;
+}
+section > div {
+	background: 	rgb(0,0,0);
+}
+section > iframe, 
+section > div {
+	width: 			1px;
+	margin: 		0 auto;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: 	all 250ms ease-in-out;
+	-o-transition: 		all 250ms ease-in-out;
+   }
+section > iframe {
+	height: 		1px;
+	border: 		1px solid #ccc;
+	border-top: 	0px;
+}
+section > div {
+	text-align: 	left;
+	padding: 		5px;
+	color: 			#fff;
+}
+section > div > a {
+	float: 			right;
+	color: 			#fff;
+}
+
+footer {
+	color: 			#ccc;
+	margin-top: 	10px;
+	text-align: 	center;
+}
+footer > p > a {
+	color: 			#ccc;
+}

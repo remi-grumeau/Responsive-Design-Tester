@@ -2,9 +2,6 @@
 // RESPONSIVE WEB DESIGN TESTER
 // https://github.com/remi-grumeau/Responsive-Design-Tester
 //
-include_once('../system/conf/init.php');
-include_once('../system/classes/sql.php');
-include_once('../system/includes/core.php');
 
 $dval = (isset($_GET['d']))?preg_split('/x/',$_GET['d']):array('320','480');
 $dval[2]=$dval[0].'x'.$dval[1];

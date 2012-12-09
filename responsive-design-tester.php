@@ -11,14 +11,14 @@ $scroll = (isset($_GET['scroll']))?$_GET['scroll']:'off';
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Responsive Design tester</title>
+	<title>Responsive Design Tester</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" type="text/css" href="responsive-design-tester.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="responsive-design-tester.css" media="screen">
 	<script type="text/javascript" charset="utf-8">
 		function gbi(a) { return document.getElementById(a); }
 
-		window.rdt = 
+		window.rdt =
 		{
 			w : <?php echo $dval[0] ?>,
 			h : <?php echo $dval[1] ?>,
@@ -74,17 +74,20 @@ $scroll = (isset($_GET['scroll']))?$_GET['scroll']:'off';
 					<option value="800x600"	  <?php if($dval[2]=='800x600') echo 'selected' ?>>800x600</option>
 				</optgroup>
 				<optgroup label="Tablets">
-					<option value="768x1024" <?php if($dval[2]=='768x1024') echo 'selected' ?>>iPad - portrait</option>
-					<option value="1024x768" <?php if($dval[2]=='1024x768') echo 'selected' ?>>iPad - landscape</option>
-					<option value="1024x600" <?php if($dval[2]=='1024x600') echo 'selected' ?>>Samsung Galaxy S</option>
-					<option value="1024x800" <?php if($dval[2]=='1024x800') echo 'selected' ?>>Samsung Galaxy S II</option>
+					<option value="600x800" <?php if($dval[2]=='600x800') echo 'selected' ?>>Amazon Kindle HD</option>
+					<option value="768x1024" <?php if($dval[2]=='768x1008') echo 'selected' ?>>iPad - portrait</option>
+					<option value="1024x768" <?php if($dval[2]=='1024x674') echo 'selected' ?>>iPad - landscape</option>
+					<option value="1024x600" <?php if($dval[2]=='1024x600') echo 'selected' ?>>Samsung Galaxy Tab</option>
+					<option value="1024x800" <?php if($dval[2]=='1024x800') echo 'selected' ?>>Samsung Galaxy Tab II</option>
 				</optgroup>
 				<optgroup label="Smartphones">
-					<option value="320x480" <?php if($dval[2]=='320x480') echo 'selected' ?>>iPhone/iPod</option>
-					<option value="640x960" <?php if($dval[2]=='640x960') echo 'selected' ?>>iPhone/iPod Retina</option>
-					<option value="480x800" <?php if($dval[2]=='480x800') echo 'selected' ?>>Google Nexus S / WindowsPhone</option>
-					<option value="360x480" <?php if($dval[2]=='360x480') echo 'selected' ?>>Blackberry Torch</option>
-					<option value="320x240" <?php if($dval[2]=='320x240') echo 'selected' ?>>Blackberry Bold</option>
+					<option value="320x416" <?php if($dval[2]=='320x416') echo 'selected' ?>>iPhone/iPod</option>
+					<option value="640x832" <?php if($dval[2]=='640x832') echo 'selected' ?>>iPhone/iPod Retina</option>
+					<option value="480x800" <?php if($dval[2]=='480x800') echo 'selected' ?>>Google Nexus S</option>
+					<option value="480x640" <?php if($dval[2]=='480x640') echo 'selected' ?>>Samsung Galaxy S2</option>
+					<option value="720x1280" <?php if($dval[2]=='720x1280') echo 'selected' ?>>Samsung Galaxy S3</option>
+					<option value="768x1165" <?php if($dval[2]=='768x1165') echo 'selected' ?>>Nokia Lumia 920</option>
+					<option value="320x240" <?php if($dval[2]=='320x240') echo 'selected' ?>>Blackberry Curve</option>
 					<option value="640x480" <?php if($dval[2]=='640x480') echo 'selected' ?>>Blackberry Bold Touch HD</option>
 				</optgroup>
 				<optgroup label="Mobile">
@@ -94,11 +97,11 @@ $scroll = (isset($_GET['scroll']))?$_GET['scroll']:'off';
 					<option value="360x640" <?php if($dval[2]=='360x640') echo 'selected' ?>>Samsung Omnia HD (360x640)</option>
 				</optgroup>
 			</select>
-			<input type="hidden" name="scroll" id="scroll_hid" value="<?php echo $scroll ?>"> 
+			<input type="hidden" name="scroll" id="scroll_hid" value="<?php echo $scroll ?>">
 			<button type="submit">ok</button>
 		</form>
 	</header>
-	
+
 	<section id="main">
 		<div id="icontentfoot">
 			<input type="checkbox" id="scrollit" onclick="rdt.updateScroll()" <?php if($scroll!='off') echo ' checked' ?>><label for="scrollit">&nbsp;scrollbars</label>
@@ -106,10 +109,10 @@ $scroll = (isset($_GET['scroll']))?$_GET['scroll']:'off';
 		</div>
 		<iframe id="icontent" src="<?php echo $url ?>" border="0" scrolling="<?php echo ($scroll!='off')?'yes':'no'; ?>" onload="rdt.resizeView()"></iframe>
 	</section>
-	
+
 	<footer>
 		<p>&copy;2011 <a href="https://github.com/remi-grumeau/Responsive-Design-Tester">Remi Grumeau</a> - Tested ok on modern browsers (Safari, Chrome, Firefox, Opera)</p>
 	</footer>
-	
+
 </body>
 </html>

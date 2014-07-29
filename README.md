@@ -20,3 +20,12 @@ You can swap width/height values by clicking on "rotate"
 
 ## Want to contribute?
 Any contribution is always welcome.
+
+## Online alternatives
+[ScreenFly](http://quirktools.com/screenfly/#u=http%3A//www.remi-grumeau.com&w=600&h=800&a=25)
+[ResponsiveTest](http://responsivetest.net/#u=http://www.remi-grumeau.com|1024|768|1)
+[Matt Kersley's responsive tester](http://mattkersley.com/responsive/)
+[IsResponsive](http://www.isresponsive.com/?site=http://www.remi-grumeau.com)
+[Designmodo responsive test](http://designmodo.com/responsive-test/)
+[res.ponsive.com](http://res.ponsive.com/?resize=www.remi-grumeau.com&iphone=on&ipad=on&android=on)
+[ResponsiveDesignChecker](http://responsivedesignchecker.com/www.remi-grumeau.com)

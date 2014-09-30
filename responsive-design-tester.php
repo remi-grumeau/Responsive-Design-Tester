@@ -82,11 +82,13 @@ $scroll = (isset($_GET['scroll']))?$_GET['scroll']:'off';
 				</optgroup>
 				<optgroup label="Smartphones">
 					<option value="320x416" <?php if($dval[2]=='320x416') echo 'selected' ?>>iPhone/iPod</option>
-					<option value="640x832" <?php if($dval[2]=='640x832') echo 'selected' ?>>iPhone/iPod Retina</option>
+					<option value="320x533" <?php if($dval[2]=='320x533') echo 'selected' ?>>Galaxy S3 Mini</option>
+					<option value="360x640" <?php if($dval[2]=='640x640') echo 'selected' ?>>Galaxy S3 / S4 / HTC One</option>
 					<option value="480x800" <?php if($dval[2]=='480x800') echo 'selected' ?>>Google Nexus S</option>
 					<option value="480x640" <?php if($dval[2]=='480x640') echo 'selected' ?>>Samsung Galaxy S2</option>
 					<option value="720x1280" <?php if($dval[2]=='720x1280') echo 'selected' ?>>Samsung Galaxy S3</option>
 					<option value="768x1165" <?php if($dval[2]=='768x1165') echo 'selected' ?>>Nokia Lumia 920</option>
+					<option value="601x962" <?php if($dval[2]=='601x962') echo 'selected' ?>>Galaxy Note 8</option>
 					<option value="320x240" <?php if($dval[2]=='320x240') echo 'selected' ?>>Blackberry Curve</option>
 					<option value="640x480" <?php if($dval[2]=='640x480') echo 'selected' ?>>Blackberry Bold Touch HD</option>
 				</optgroup>

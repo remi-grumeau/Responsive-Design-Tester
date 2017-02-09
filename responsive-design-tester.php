@@ -3,11 +3,11 @@
 // https://github.com/remi-grumeau/Responsive-Design-Tester
 //
 
-$dval = (isset($_GET['d']))?preg_split('/x/',$_GET['d']):array('320','480');
-$dval[2]=$dval[0].'x'.$dval[1];
+$dval = (isset($_GET['d']))? preg_split('/x/',$_GET['d']) : array('320','480');
+$dval[2] = $dval[0].'x'.$dval[1];
 
-$url = (isset($_GET['url']))?$_GET['url']:'';
-$scroll = (isset($_GET['scroll']))?$_GET['scroll']:'off';
+$url = (isset($_GET['url']))? $_GET['url'] : '';
+$scroll = (isset($_GET['scroll']))? $_GET['scroll'] : 'off';
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,44 +16,42 @@ $scroll = (isset($_GET['scroll']))?$_GET['scroll']:'off';
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="responsive-design-tester.css" media="screen">
 	<script type="text/javascript" charset="utf-8">
-		function gbi(a) { return document.getElementById(a); }
+		var gbi = function(a) { 
+                    return document.getElementById(a); 
+                }
 
 		window.rdt =
 		{
 			w : <?php echo $dval[0] ?>,
 			h : <?php echo $dval[1] ?>,
-
 			resizeView : function() {
 				var a = gbi('dselect').value.split('x');
-				rdt.w=a[0];
-				rdt.h=a[1];
-				gbi('icontent').style.width=gbi('icontentfoot').style.width = rdt.w+'px';
+				rdt.w = a[0];
+				rdt.h = a[1];
+				gbi('icontent').style.width = gbi('icontentfoot').style.width = rdt.w+'px';
 				gbi('icontent').style.height = rdt.h+'px';
 			},
-
 			updateUrl: function() {
 				setTimeout(function() {
-					if(gbi('icontent').src!=gbi('urlinput').value)
-						gbi('icontent').src=gbi('urlinput').value;
+					if(gbi('icontent').src != gbi('urlinput').value)
+						gbi('icontent').src = gbi('urlinput').value;
 				}, 300);
 				rdt.resizeView();
 			},
-
 			updateScroll: function() {
 				gbi('main').removeChild(gbi('icontent'));
 				var ifr = document.createElement('iframe');
-				ifr.id='icontent';
-				ifr.src=gbi('urlinput').value;
-				ifr.scrolling=(gbi('scrollit').value=='on')?'yes':'no';
-				gbi('scroll_hid').value=(gbi('scrollit').value=='on')?'on':'off';
+				ifr.id = 'icontent';
+				ifr.src = gbi('urlinput').value;
+				ifr.scrolling = (gbi('scrollit').value=='on')? 'yes' : 'no';
+				gbi('scroll_hid').value = (gbi('scrollit').value=='on')? 'on' : 'off';
 				gbi('main').appendChild(ifr);
 				rdt.resizeView();
-
 			},
 			rotate: function() {
 				rdt.w = parseInt(gbi('icontent').style.width);
 				rdt.h = parseInt(gbi('icontent').style.height);
-				gbi('icontent').style.width=gbi('icontentfoot').style.width = rdt.h+'px';
+				gbi('icontent').style.width = gbi('icontentfoot').style.width = rdt.h+'px';
 				gbi('icontent').style.height = rdt.w+'px';
 			}
 		}
@@ -65,16 +63,17 @@ $scroll = (isset($_GET['scroll']))?$_GET['scroll']:'off';
 		<form method="GET" action="">
 			<a class="prev" onclick="icontent.history.go(-1)"><</a>
 			<a class="next" onclick="icontent.history.go(-1)">></a>
-			<input type="url" id="urlinput" placeholder="Type your url here" name="url" value="<?php echo $url ?>" onKeyUp="rdt.updateUrl()" />
+			<input type="url" id="urlinput" placeholder="Type your url here" 
+                               name="url" value="<?php echo $url ?>" onKeyUp="rdt.updateUrl()" />
 			<select name="d" size="1" id="dselect" onchange="rdt.resizeView()">
 				<optgroup label="Desktop">
-					<option value="1024x768"  <?php if($dval[2]=='1024x768') echo 'selected' ?>>1024x768</option>
-					<option value="1280x800"  <?php if($dval[2]=='1280x800') echo 'selected' ?>>1280x800</option>
-					<option value="1600x1400" <?php if($dval[2]=='1600x1400') echo 'selected' ?>>1600x1400</option>
-					<option value="800x600"	  <?php if($dval[2]=='800x600') echo 'selected' ?>>800x600</option>
+					<option value="1024x768"  <?php if($dval[2] == '1024x768') echo 'selected' ?>>1024x768</option>
+					<option value="1280x800"  <?php if($dval[2] == '1280x800') echo 'selected' ?>>1280x800</option>
+					<option value="1600x1400" <?php if($dval[2] == '1600x1400') echo 'selected' ?>>1600x1400</option>
+					<option value="800x600"	  <?php if($dval[2] == '800x600') echo 'selected' ?>>800x600</option>
 				</optgroup>
 				<optgroup label="Tablets">
-					<option value="600x800" <?php if($dval[2]=='600x800') echo 'selected' ?>>Amazon Kindle HD</option>
+					<option value="600x800" <?php if($dval[2] == '600x800') echo 'selected' ?>>Amazon Kindle HD</option>
 					<option value="768x1024" <?php if($dval[2]=='768x1008') echo 'selected' ?>>iPad - portrait</option>
 					<option value="1024x768" <?php if($dval[2]=='1024x674') echo 'selected' ?>>iPad - landscape</option>
 					<option value="1024x600" <?php if($dval[2]=='1024x600') echo 'selected' ?>>Samsung Galaxy Tab</option>
